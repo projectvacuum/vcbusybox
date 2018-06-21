@@ -35,24 +35,24 @@
 #
 #  Contacts: Andrew.McNab@cern.ch  http://www.gridpp.ac.uk/vac/
 #
-/busybox mkdir -p /srv /tmp /usr/local /usr/libexec /var/cache /var/cvs /var/db \
-  /var/empty /var/lib /var/local /var/lock /var/log /var/run /var/tmp /etc
+/busybox mkdir -p /srv /tmp /usr/local /usr/libexec /usr/bin /usr/sbin \
+                  /var/cache /var/cvs /var/db /var/empty /var/lib \
+                  /var/local /var/lock /var/log /var/run /var/tmp /etc
 /busybox ln -s /cvmfs/cernvm-prod.cern.ch/cvm3/bin    \
                /cvmfs/cernvm-prod.cern.ch/cvm3/lib    \
                /cvmfs/cernvm-prod.cern.ch/cvm3/lib64  \
                /cvmfs/cernvm-prod.cern.ch/cvm3/opt    \
                /cvmfs/cernvm-prod.cern.ch/cvm3/sbin   /
-/busybox ln -s /cvmfs/cernvm-prod.cern.ch/cvm3/usr/bin \
-               /cvmfs/cernvm-prod.cern.ch/cvm3/usr/doc \
+/busybox ln -s /cvmfs/cernvm-prod.cern.ch/cvm3/usr/doc \
                /cvmfs/cernvm-prod.cern.ch/cvm3/usr/etc \
                /cvmfs/cernvm-prod.cern.ch/cvm3/usr/include \
                /cvmfs/cernvm-prod.cern.ch/cvm3/usr/lib \
                /cvmfs/cernvm-prod.cern.ch/cvm3/usr/lib64 \
-               /cvmfs/cernvm-prod.cern.ch/cvm3/usr/libexec \
-               /cvmfs/cernvm-prod.cern.ch/cvm3/usr/sbin \
                /cvmfs/cernvm-prod.cern.ch/cvm3/usr/share \
                /cvmfs/cernvm-prod.cern.ch/cvm3/usr/src \
                /cvmfs/cernvm-prod.cern.ch/cvm3/usr/vice /usr/
+/busybox ln -s /cvmfs/cernvm-prod.cern.ch/cvm3/usr/bin/* /usr/bin
+/busybox ln -s /cvmfs/cernvm-prod.cern.ch/cvm3/usr/sbin/* /usr/sbin
 /busybox ln -s /cvmfs/cernvm-prod.cern.ch/cvm3/usr/libexec/* /usr/libexec
 /busybox cp -a /cvmfs/cernvm-prod.cern.ch/cvm3/etc       \
                /cvmfs/cernvm-prod.cern.ch/cvm3/home      \
